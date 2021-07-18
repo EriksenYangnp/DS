@@ -11,8 +11,8 @@ public class Heap_P454 {
 		heapArray = new Node[maxSize];
 	}
 	public Node remove() {
-		Node root = heapArray[0];
-		heapArray[0] = heapArray[--currentSize];
+		Node root = heapArray[0];   //get root
+		heapArray[0] = heapArray[--currentSize]; // move last to root then trickleDown
 		trickleDown(0);
 		return root; 
 	}
